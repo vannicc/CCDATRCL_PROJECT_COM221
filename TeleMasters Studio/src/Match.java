@@ -594,7 +594,18 @@ public class Match {
 			new String[] {
 				"PLAYER", "K", "D", "A", "P", "DF"
 			}
-		));
+		) { /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+		Class[] columnTypes = new Class[] {
+				String.class, Integer.class, Integer.class, Integer.class, Integer.class, Integer.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+			
+		});
 		tableTeam1.getColumnModel().getColumn(0).setPreferredWidth(150);
 		tableTeam1.getColumnModel().getColumn(1).setPreferredWidth(30);
 		tableTeam1.getColumnModel().getColumn(2).setPreferredWidth(30);
@@ -630,7 +641,17 @@ public class Match {
 			new String[] {
 				"PLAYER", "K", "D", "A", "P", "DF"
 			}
-		));
+		) { /**
+			 * 
+			 */
+			private static final long serialVersionUID = 751324336610695653L;
+		Class[] columnTypes = new Class[] {
+				String.class, Integer.class, Integer.class, Integer.class, Integer.class, Integer.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
 		tableTeam2.getColumnModel().getColumn(0).setPreferredWidth(150);
 		tableTeam2.getColumnModel().getColumn(1).setPreferredWidth(30);
 		tableTeam2.getColumnModel().getColumn(2).setPreferredWidth(30);
@@ -1019,7 +1040,7 @@ public class Match {
 		        LeagueStats statsFrame = new LeagueStats();
 		        statsFrame.updateLabelsBasedOnGame(gameNum); // Provide the correct game number
 		        statsFrame.setVisible(true);
-			leagueSummaryFrame.dispose();
+		        leagueSummaryFrame.dispose();
 		    }
 		});
 
