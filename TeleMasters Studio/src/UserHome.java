@@ -90,9 +90,7 @@ public class UserHome extends JFrame {
 		String tournaStatus = ExcelHandler.readSpecificCell(fileDirectory + "MatchSched.xlsx", 3, 3);
 		if (!(tournaStatus.equalsIgnoreCase("N/A"))) {
 			lblTournaStatus.setText("FINISHED");
-		}
-		
-		if (ExcelHandler.fileReader(fileDirectory + "VanguardTeams.txt").size() == 4) {
+		} else if (ExcelHandler.fileReader(fileDirectory + "VanguardTeams.txt").size() == 4) {
 			lblTournaStatus.setText("ONGOING");
 		}
 		
