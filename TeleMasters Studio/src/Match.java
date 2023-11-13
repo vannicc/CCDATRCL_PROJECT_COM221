@@ -1019,6 +1019,7 @@ public class Match {
 		        LeagueStats statsFrame = new LeagueStats();
 		        statsFrame.updateLabelsBasedOnGame(gameNum); // Provide the correct game number
 		        statsFrame.setVisible(true);
+			leagueSummaryFrame.dispose();
 		    }
 		});
 
